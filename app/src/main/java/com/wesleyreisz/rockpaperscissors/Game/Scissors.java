@@ -10,12 +10,18 @@ public class Scissors implements GameType {
 
     @Override
     public String eval(Integer opponentChoice) {
-        if (opponentChoice== R.id.btnPaper){
+        if (opponentChoice== R.id.btnRock){
+            return GameUtils.LOSES_TO;
+        }else if (opponentChoice==R.id.btnPaper){
             return GameUtils.BEATS;
-        }else if (opponentChoice==R.id.btnRock){
+        }
+        else if (opponentChoice==R.id.btnLizard){
+            return GameUtils.BEATS;
+        }
+        else if (opponentChoice==R.id.btnSpock){
             return GameUtils.LOSES_TO;
         }
-        else{
+        else {
             return GameUtils.TIES;
         }
     }

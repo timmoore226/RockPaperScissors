@@ -8,21 +8,21 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnPaper"
+        android:id="@+id/btnRock"
         android:backgroundTint="@android:color/transparent"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/paper"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/rock"
         />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnRock"
+        android:id="@+id/btnPaper"
         android:backgroundTint="@android:color/transparent"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/rock"
-        android:layout_above="@id/btnPaper"
+        android:layout_below="@id/btnRock"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/paper"
         />
 
     <ImageButton
@@ -30,9 +30,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnScissors"
         android:backgroundTint="@android:color/transparent"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/scissors"
-        android:layout_below="@id/btnPaper"
+        android:layout_below="@id/btnRock"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/btnPaper"
         />
 
     <ImageButton
@@ -40,9 +41,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnLizard"
         android:backgroundTint="@android:color/transparent"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/lizard"
-        android:layout_below="@id/btnScissors"
+        android:layout_below="@id/btnPaper"
         />
 
     <ImageButton
@@ -50,9 +50,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnSpock"
         android:backgroundTint="@android:color/transparent"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/spock"
-        android:layout_below="@id/btnLizard"
+        android:layout_below="@id/btnScissors"
+        android:layout_toRightOf="@+id/btnLizard"
         />
 
 </RelativeLayout>
