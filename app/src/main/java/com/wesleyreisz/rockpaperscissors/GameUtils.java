@@ -37,8 +37,12 @@ public class GameUtils {
             return R.drawable.rock;
         }else if (buttonChoice==R.id.btnPaper){
             return R.drawable.paper;
-        }else{
+        }else if (buttonChoice==R.id.btnScissors){
             return R.drawable.scissors;
+        }else if (buttonChoice==R.id.btnLizard) {
+            return R.drawable.lizard;
+        }else {
+            return R.drawable.spock;
         }
     }
 
@@ -49,8 +53,12 @@ public class GameUtils {
             gameType = new Rock();
         }else if  (playerSelectedChoice==R.id.btnPaper){
             gameType = new Paper();
-        }else{
+        }else if  (playerSelectedChoice==R.id.btnScissors){
             gameType = new Scissors();
+        }else if  (playerSelectedChoice==R.id.btnLizard){
+            gameType = new Lizard();
+        }else{
+            gameType = new Spock();
         }
         return gameType.eval(computerSelectedChoice);
     }
